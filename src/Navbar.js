@@ -24,8 +24,6 @@ import logo from './img/logo1.png';
 
 export default class Example extends React.Component {
   
-  
-  
   constructor(props) {
     super(props);
 
@@ -50,8 +48,7 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-            <NavItem> 
-            
+            <NavItem>   
               </NavItem>
               <NavItem>  
               <InputGroup>
@@ -62,10 +59,10 @@ export default class Example extends React.Component {
             </InputGroup>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Masuk</NavLink>
+                <NavLink href="/components/" outline> <Button outline color="secondary">Masuk</Button> </NavLink>  
               </NavItem>
               <NavItem>
-                <NavLink href="#" >Login</NavLink>
+                <NavLink href="#" ><Button outline color="secondary">Login</Button></NavLink>
                 </NavItem>
             </Nav>
           </Collapse>
