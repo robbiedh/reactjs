@@ -11,7 +11,11 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Component
+  Component,
+  Label,
+   Input, 
+   FormText,FormGroup,Container, Row, Col,
+   Button, InputGroupAddon,InputGroupText,InputGroup
  } from 'reactstrap';
 import logo from './img/logo1.png';
 
@@ -38,33 +42,35 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
+       
         <Navbar color="faded" light expand="md" color="warning" >
           <NavbarBrand href="/">
-          <img src={logo} width="120px" height="50px" alt="Borong" />
+          <img src={logo} width="120px" height="40px" alt="Borong" />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Beranda</NavLink>
+            <NavItem> 
+            
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  user
-                </DropdownToggle>
-                <DropdownMenu >
-                  <DropdownItem>
-                    Registrasi
-                  </DropdownItem>
-                  <DropdownItem>
-                    Login
-                  </DropdownItem>
-                 
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>  
+              <InputGroup>
+             <InputGroupAddon addonType="prepend">
+             <Button color="danger">Search</Button>
+             </InputGroupAddon>
+            <Input placeholder="cari barang" />
+            </InputGroup>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/components/">Masuk</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#" >Login</NavLink>
+                </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
+       
       </div>
     );
   }
